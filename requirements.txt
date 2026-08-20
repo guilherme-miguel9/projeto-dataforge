@@ -1,5 +1,0 @@
-pandas
-pydantic
-python-dotenv
-request
-pytest
