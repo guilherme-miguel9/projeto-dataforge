@@ -20,5 +20,5 @@ class CustomerContract(BaseModel):
     first_name : str = Field(min_length=1, max_length= 50, description = 'Nome não pode ser nulo')
     last_name : str = Field(min_length=1, max_length= 50, description = 'Sobrenome não pode ser nulo')
     email : str = Field(min_length=1, max_length= 50, description = 'Email não pode ser nulo')
-    age : int = Field(gen=0, description = 'Idade não pode ser nulo')
+    age : int = Field(ge=0, description = 'Idade não pode ser nulo')
     
