@@ -34,3 +34,7 @@ dev = [
 
 [tool.poetry]
 packages = [{include = "dataforge", from = "src"}]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+
