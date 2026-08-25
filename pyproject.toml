@@ -1,7 +1,7 @@
 [project]
 name = "projeto-dataforge"
 version = "0.1.0"
-description = ""
+description = "Plataforma de Engenharia de Dados com Arquitetura Medalhao, MinIO, Polars, PostgreSQL e dbt"
 authors = [
     {name = "Guilherme Miguel"}
 ]
