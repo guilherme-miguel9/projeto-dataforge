@@ -10,6 +10,8 @@ jobs:
   test:
     name: Linting and Unit Tests
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: src
 
     steps:
       - name: Checkout Code
