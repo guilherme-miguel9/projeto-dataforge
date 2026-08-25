@@ -1,6 +1,8 @@
-import requests
-from pathlib import Path
 import json
+from pathlib import Path
+
+import requests
+
 from dataforge.utils.paths import RAW_DATA_DIR
 
 

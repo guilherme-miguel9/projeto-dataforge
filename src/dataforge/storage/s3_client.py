@@ -41,7 +41,7 @@ def init_s3_buckets():
     except ClientError as e:
         print(f"Erro na API do MinIO: {e}")
         return None
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001
         print(f"Erro ao conectar com o MinIO: {e}")
         return None
 
