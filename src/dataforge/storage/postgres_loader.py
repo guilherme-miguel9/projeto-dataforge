@@ -26,12 +26,14 @@ def load_silver_to_postgres():
     )
     if orders_path.exists():
         df_orders = pl.read_parquet(orders_path)
-        # O to_sql cria a tabela e faz os INSERTs automaticamente
+        with engine.connect() as conn:
+            conn.execute(text("TRUNCATE TABLE raw_silver.field_orders;"))
+            conn.commit()
         df_orders.to_pandas().to_sql(
             name="field_orders",
             con=engine,
             schema="raw_silver",
-            if_exists="replace",
+            if_exists="append",
             index=False,
         )
         log.info(
@@ -46,11 +48,14 @@ def load_silver_to_postgres():
     )
     if customers_path.exists():
         df_customers = pl.read_parquet(customers_path)
+        with engine.connect() as conn:
+            conn.execute(text("TRUNCATE TABLE raw_silver.customers;"))
+            conn.commit()
         df_customers.to_pandas().to_sql(
             name="customers",
             con=engine,
             schema="raw_silver",
-            if_exists="replace",
+            if_exists="append",
             index=False,
         )
         log.info(

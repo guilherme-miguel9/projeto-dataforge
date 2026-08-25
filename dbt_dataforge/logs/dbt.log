@@ -2310,3 +2310,932 @@ having count(*) > 1
 [0m09:22:11.606260 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8ecc50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8c3280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d8c36a0>]}
 [0m09:22:11.606476 [debug] [MainThread]: Flushing usage events
 [0m09:22:12.137384 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:18:39.959710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b039e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c822ad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c822850>]}
+
+
+============================== 11:18:39.962551 | 6d649855-4b65-4dd1-bdc6-a977f1a0f33c ==============================
+[0m11:18:39.962551 [info ] [MainThread]: Running with dbt=1.12.3
+[0m11:18:39.962859 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'log_format': 'default', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'use_colors': 'True', 'no_print': 'None', 'target_path': 'None', 'introspect': 'True', 'hints_enabled': 'True', 'debug': 'False', 'invocation_command': 'dbt run --profiles-dir .', 'partial_parse': 'True', 'warn_error': 'None', 'indirect_selection': 'eager', 'profiles_dir': '.', 'printer_width': '80', 'maximum_seed_size_mib': '1', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'empty': 'False', 'log_path': '/Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/logs', 'quiet': 'False'}
+[0m11:18:40.054761 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c7a28b0>]}
+[0m11:18:40.083819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b9e39b0>]}
+[0m11:18:40.084559 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m11:18:40.136707 [debug] [MainThread]: checksum: cde570ccdd9444cf5232fa71678728c598e2e34096a2d1a5ad46a5d547f48a01, vars: {}, profile: dbt_dataforge, target: dev, version: 1.12.3
+[0m11:18:40.224732 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:18:40.224952 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:18:40.225066 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:18:40.229673 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d91b650>]}
+[0m11:18:40.298267 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/manifest.json
+[0m11:18:40.300427 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/semantic_manifest.json
+[0m11:18:40.311554 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/osi_document.json
+[0m11:18:40.317819 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db707d0>]}
+[0m11:18:40.318045 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 477 macros
+[0m11:18:40.318188 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db7a510>]}
+[0m11:18:40.319209 [info ] [MainThread]: 
+[0m11:18:40.319363 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:18:40.319475 [info ] [MainThread]: 
+[0m11:18:40.319712 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:18:40.321572 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dataforge_dw'
+[0m11:18:40.350227 [debug] [ThreadPool]: Using postgres connection "list_dataforge_dw"
+[0m11:18:40.350397 [debug] [ThreadPool]: On list_dataforge_dw: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "connection_name": "list_dataforge_dw"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:18:40.350522 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:18:40.380859 [debug] [ThreadPool]: SQL status: SELECT 6 in 0.030 seconds
+[0m11:18:40.381466 [debug] [ThreadPool]: On list_dataforge_dw: Close
+[0m11:18:40.382163 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_dataforge_dw, now list_dataforge_dw_gold)
+[0m11:18:40.384861 [debug] [ThreadPool]: Using postgres connection "list_dataforge_dw_gold"
+[0m11:18:40.385056 [debug] [ThreadPool]: On list_dataforge_dw_gold: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "connection_name": "list_dataforge_dw_gold"} */
+select
+      'dataforge_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'dataforge_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'dataforge_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+    union all
+    select distinct
+     'dataforge_dw' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'gold'
+  
+[0m11:18:40.385208 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:18:40.397159 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.012 seconds
+[0m11:18:40.397756 [debug] [ThreadPool]: On list_dataforge_dw_gold: ROLLBACK
+[0m11:18:40.398166 [debug] [ThreadPool]: On list_dataforge_dw_gold: Close
+[0m11:18:40.400332 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:40.400542 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:18:40.400732 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:18:40.410560 [debug] [MainThread]: SQL status: SELECT 2 in 0.010 seconds
+[0m11:18:40.411124 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd131e0>]}
+[0m11:18:40.411352 [debug] [MainThread]: On master: ROLLBACK
+[0m11:18:40.411756 [debug] [MainThread]: On master: COMMIT
+[0m11:18:40.411888 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:40.412005 [debug] [MainThread]: On master: COMMIT
+[0m11:18:40.413032 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m11:18:40.413176 [debug] [MainThread]: On master: Close
+[0m11:18:40.414967 [debug] [Thread-1 (]: Began running node model.dbt_dataforge.stg_customers
+[0m11:18:40.415492 [info ] [Thread-1 (]: 1 of 5 START sql view model gold.stg_customers ................................. [RUN]
+[0m11:18:40.415757 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dataforge_dw_gold, now model.dbt_dataforge.stg_customers)
+[0m11:18:40.415940 [debug] [Thread-1 (]: Began compiling node model.dbt_dataforge.stg_customers
+[0m11:18:40.419398 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dataforge.stg_customers"
+[0m11:18:40.420036 [debug] [Thread-1 (]: Began executing node model.dbt_dataforge.stg_customers
+[0m11:18:40.415216 [debug] [Thread-2 (]: Began running node model.dbt_dataforge.stg_field_orders
+[0m11:18:40.430637 [info ] [Thread-2 (]: 2 of 5 START sql view model gold.stg_field_orders .............................. [RUN]
+[0m11:18:40.431798 [debug] [Thread-2 (]: Acquiring new postgres connection 'model.dbt_dataforge.stg_field_orders'
+[0m11:18:40.432283 [debug] [Thread-2 (]: Began compiling node model.dbt_dataforge.stg_field_orders
+[0m11:18:40.434128 [debug] [Thread-2 (]: Writing injected SQL for node "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.454808 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dataforge.stg_customers"
+[0m11:18:40.455339 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.stg_customers"
+[0m11:18:40.455744 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_customers"} */
+
+  create view "dataforge_dw"."gold"."stg_customers__dbt_tmp"
+    
+    
+  as (
+    with source_data as (
+    select * from "dataforge_dw"."raw_silver"."customers"
+)
+
+select
+    id as customer_id,
+    first_name,
+    last_name,
+    email,
+    age
+from source_data
+  );
+[0m11:18:40.455948 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:18:40.455540 [debug] [Thread-2 (]: Began executing node model.dbt_dataforge.stg_field_orders
+[0m11:18:40.457398 [debug] [Thread-2 (]: Writing runtime sql for node "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.457903 [debug] [Thread-2 (]: Using postgres connection "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.458117 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_field_orders"} */
+
+  create view "dataforge_dw"."gold"."stg_field_orders__dbt_tmp"
+    
+    
+  as (
+    with source_data as (
+    select * from "dataforge_dw"."raw_silver"."field_orders"
+)
+
+select
+    -- Identificadores e Chaves
+    ordem_id::text as numero_item_ordem,
+    contratos::text as contrato,
+    LPAD(ordem_id::text, 8, '0') as instalacao,
+    
+    -- Dados do Cliente
+    nome_cliente::text as nome_cliente,
+    
+    -- Métricas e Faturamento
+    val_fat::numeric(10, 2) as valor_fatura,
+    hora_leitura::time as hora_leitura,
+    latitude::numeric(9, 6) as latitude,
+    longitude::numeric(9, 6) as longitude,
+    status_leitura::text as status_leitura
+
+from source_data
+  );
+[0m11:18:40.458295 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:18:40.465081 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m11:18:40.468373 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.stg_customers"
+[0m11:18:40.468767 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_customers"} */
+alter table "dataforge_dw"."gold"."stg_customers" rename to "stg_customers__dbt_backup"
+[0m11:18:40.468570 [debug] [Thread-2 (]: SQL status: CREATE VIEW in 0.010 seconds
+[0m11:18:40.469901 [debug] [Thread-2 (]: Using postgres connection "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.470230 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_field_orders"} */
+alter table "dataforge_dw"."gold"."stg_field_orders" rename to "stg_field_orders__dbt_backup"
+[0m11:18:40.470068 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.471172 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.stg_customers"
+[0m11:18:40.471506 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_customers"} */
+alter table "dataforge_dw"."gold"."stg_customers__dbt_tmp" rename to "stg_customers"
+[0m11:18:40.471348 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.472560 [debug] [Thread-2 (]: Using postgres connection "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.472895 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_field_orders"} */
+alter table "dataforge_dw"."gold"."stg_field_orders__dbt_tmp" rename to "stg_field_orders"
+[0m11:18:40.472743 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.479928 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m11:18:40.485741 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: COMMIT
+[0m11:18:40.486429 [debug] [Thread-2 (]: Using postgres connection "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.486802 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: COMMIT
+[0m11:18:40.483030 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: COMMIT
+[0m11:18:40.488367 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.stg_customers"
+[0m11:18:40.488576 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: COMMIT
+[0m11:18:40.489133 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m11:18:40.492302 [debug] [Thread-2 (]: Applying DROP to: "dataforge_dw"."gold"."stg_field_orders__dbt_backup"
+[0m11:18:40.495263 [debug] [Thread-2 (]: Using postgres connection "model.dbt_dataforge.stg_field_orders"
+[0m11:18:40.492911 [debug] [Thread-1 (]: SQL status: COMMIT in 0.004 seconds
+[0m11:18:40.496239 [debug] [Thread-1 (]: Applying DROP to: "dataforge_dw"."gold"."stg_customers__dbt_backup"
+[0m11:18:40.496562 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.stg_customers"
+[0m11:18:40.495465 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_field_orders"} */
+drop view if exists "dataforge_dw"."gold"."stg_field_orders__dbt_backup" cascade
+[0m11:18:40.496716 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.stg_customers"} */
+drop view if exists "dataforge_dw"."gold"."stg_customers__dbt_backup" cascade
+[0m11:18:40.498470 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m11:18:40.499773 [debug] [Thread-1 (]: On model.dbt_dataforge.stg_customers: Close
+[0m11:18:40.499955 [debug] [Thread-2 (]: SQL status: DROP VIEW in 0.003 seconds
+[0m11:18:40.500589 [debug] [Thread-2 (]: On model.dbt_dataforge.stg_field_orders: Close
+[0m11:18:40.502399 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10db7e8d0>]}
+[0m11:18:40.502564 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de8bb70>]}
+[0m11:18:40.502877 [info ] [Thread-1 (]: 1 of 5 OK created sql view model gold.stg_customers ............................ [[32mCREATE VIEW[0m in 0.09s]
+[0m11:18:40.503430 [debug] [Thread-1 (]: Finished running node model.dbt_dataforge.stg_customers
+[0m11:18:40.503195 [info ] [Thread-2 (]: 2 of 5 OK created sql view model gold.stg_field_orders ......................... [[32mCREATE VIEW[0m in 0.07s]
+[0m11:18:40.503747 [debug] [Thread-2 (]: Finished running node model.dbt_dataforge.stg_field_orders
+[0m11:18:40.504060 [debug] [Thread-4 (]: Began running node model.dbt_dataforge.dim_locations
+[0m11:18:40.504612 [info ] [Thread-4 (]: 4 of 5 START sql table model gold.dim_locations ................................ [RUN]
+[0m11:18:40.504861 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.dbt_dataforge.dim_locations'
+[0m11:18:40.505004 [debug] [Thread-4 (]: Began compiling node model.dbt_dataforge.dim_locations
+[0m11:18:40.505957 [debug] [Thread-4 (]: Writing injected SQL for node "model.dbt_dataforge.dim_locations"
+[0m11:18:40.504231 [debug] [Thread-1 (]: Began running node model.dbt_dataforge.fct_field_orders
+[0m11:18:40.504423 [debug] [Thread-3 (]: Began running node model.dbt_dataforge.dim_customers
+[0m11:18:40.506394 [info ] [Thread-3 (]: 3 of 5 START sql table model gold.dim_customers ................................ [RUN]
+[0m11:18:40.506614 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.dbt_dataforge.dim_customers'
+[0m11:18:40.506754 [debug] [Thread-3 (]: Began compiling node model.dbt_dataforge.dim_customers
+[0m11:18:40.507716 [debug] [Thread-3 (]: Writing injected SQL for node "model.dbt_dataforge.dim_customers"
+[0m11:18:40.506188 [info ] [Thread-1 (]: 5 of 5 START sql table model gold.fct_field_orders ............................. [RUN]
+[0m11:18:40.508011 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_dataforge.stg_customers, now model.dbt_dataforge.fct_field_orders)
+[0m11:18:40.508341 [debug] [Thread-1 (]: Began compiling node model.dbt_dataforge.fct_field_orders
+[0m11:18:40.509145 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.508196 [debug] [Thread-4 (]: Began executing node model.dbt_dataforge.dim_locations
+[0m11:18:40.509341 [debug] [Thread-3 (]: Began executing node model.dbt_dataforge.dim_customers
+[0m11:18:40.520725 [debug] [Thread-3 (]: Writing runtime sql for node "model.dbt_dataforge.dim_customers"
+[0m11:18:40.519528 [debug] [Thread-4 (]: Writing runtime sql for node "model.dbt_dataforge.dim_locations"
+[0m11:18:40.521056 [debug] [Thread-1 (]: Began executing node model.dbt_dataforge.fct_field_orders
+[0m11:18:40.522137 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.522430 [debug] [Thread-4 (]: Using postgres connection "model.dbt_dataforge.dim_locations"
+[0m11:18:40.522807 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_locations"} */
+
+  
+    
+
+  create  table "dataforge_dw"."gold"."dim_locations__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/dim_locations.sql                                                               
+    with distinct_locations as (                                                                    
+        select distinct                                                                             
+            latitude,                                                                               
+            longitude                                                                               
+        from "dataforge_dw"."gold"."stg_field_orders"                                                          
+        where latitude is not null and longitude is not null                                        
+    )                                                                                               
+                                                                                                    
+    select                                                                                          
+        -- Chave Substituta para a Localização Geográfica                                           
+        md5(concat(latitude::text, '_', longitude::text)) as sk_localizacao,                        
+        latitude,                                                                                   
+        longitude                                                                                   
+                                                                                                    
+    from distinct_locations
+  );
+  
+[0m11:18:40.523028 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:18:40.522610 [debug] [Thread-3 (]: Using postgres connection "model.dbt_dataforge.dim_customers"
+[0m11:18:40.523475 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_customers"} */
+
+  
+    
+
+  create  table "dataforge_dw"."gold"."dim_customers__dbt_tmp"
+  
+  
+    as
+  
+  (
+    -- models/marts/dim_customers.sql                                                               
+    with orders_customers as (                                                                      
+        select distinct                                                                             
+            contrato,                                                                               
+            nome_cliente                                                                            
+        from "dataforge_dw"."gold"."stg_field_orders"                                                          
+    ),                                                                                              
+                                                                                                    
+    api_customers as (                                                                              
+        select                                                                                      
+            customer_id,                                                                            
+            first_name,                                                                             
+            last_name,                                                                              
+            email,                                                                                  
+            age                                                                                     
+        from "dataforge_dw"."gold"."stg_customers"                                                             
+    )                                                                                               
+                                                                                                    
+    select                                                                                          
+        -- Cria uma Chave Substituta (Surrogate Key) para o Cliente                                 
+        md5(o.contrato) as sk_cliente,                                                              
+        o.contrato as id_contrato,                                                                  
+        o.nome_cliente,                                                                             
+        c.email,                                                                                    
+        c.age as idade                                                                              
+                                                                                                    
+    from orders_customers o                                                                         
+    left join api_customers c                                                                       
+        on lower(split_part(o.nome_cliente, ' ', 1)) = lower(c.first_name)
+  );
+  
+[0m11:18:40.523691 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:18:40.523250 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.523940 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.fct_field_orders"} */
+
+  
+    
+
+  create  table "dataforge_dw"."gold"."fct_field_orders__dbt_tmp"
+  
+  
+    as
+  
+  (
+    with stg_orders as (                                                                            
+        select * from "dataforge_dw"."gold"."stg_field_orders"                                                 
+    )                                                                                               
+                                                                                                    
+    select                                                                                          
+        -- Chave Primária da Ordem                                                                  
+        numero_item_ordem,                                                                          
+                                                                                                    
+        -- Chaves Estrangeiras (FKs) ligando com as Dimensões!                                      
+        md5(contrato) as sk_cliente,                                                                
+        md5(concat(latitude::text, '_', longitude::text)) as sk_localizacao,                        
+                                                                                                    
+        -- Métricas e Fatos                                                                         
+        instalacao,                                                                                 
+        valor_fatura,                                                                               
+        hora_leitura,                                                                               
+        status_leitura,                                                                             
+                                                                                                    
+        -- Data de Carga no Data Warehouse                                                          
+        current_timestamp as data_processamento_dw                                                  
+                                                                                                    
+    from stg_orders
+  );
+  
+[0m11:18:40.524146 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:18:40.538908 [debug] [Thread-3 (]: SQL status: SELECT 70 in 0.015 seconds
+[0m11:18:40.542507 [debug] [Thread-3 (]: Using postgres connection "model.dbt_dataforge.dim_customers"
+[0m11:18:40.543074 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_customers"} */
+alter table "dataforge_dw"."gold"."dim_customers" rename to "dim_customers__dbt_backup"
+[0m11:18:40.542912 [debug] [Thread-4 (]: SQL status: SELECT 70 in 0.020 seconds
+[0m11:18:40.544518 [debug] [Thread-4 (]: Using postgres connection "model.dbt_dataforge.dim_locations"
+[0m11:18:40.544835 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_locations"} */
+alter table "dataforge_dw"."gold"."dim_locations" rename to "dim_locations__dbt_backup"
+[0m11:18:40.542734 [debug] [Thread-1 (]: SQL status: SELECT 70 in 0.019 seconds
+[0m11:18:40.545873 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.544683 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.547115 [debug] [Thread-3 (]: Using postgres connection "model.dbt_dataforge.dim_customers"
+[0m11:18:40.547277 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_customers"} */
+alter table "dataforge_dw"."gold"."dim_customers__dbt_tmp" rename to "dim_customers"
+[0m11:18:40.546035 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.546179 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.fct_field_orders"} */
+alter table "dataforge_dw"."gold"."fct_field_orders" rename to "fct_field_orders__dbt_backup"
+[0m11:18:40.548138 [debug] [Thread-4 (]: Using postgres connection "model.dbt_dataforge.dim_locations"
+[0m11:18:40.548454 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_locations"} */
+alter table "dataforge_dw"."gold"."dim_locations__dbt_tmp" rename to "dim_locations"
+[0m11:18:40.548295 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.549161 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: COMMIT
+[0m11:18:40.549470 [debug] [Thread-3 (]: Using postgres connection "model.dbt_dataforge.dim_customers"
+[0m11:18:40.549749 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: COMMIT
+[0m11:18:40.549323 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.550658 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.549616 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.551588 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: COMMIT
+[0m11:18:40.551726 [debug] [Thread-4 (]: Using postgres connection "model.dbt_dataforge.dim_locations"
+[0m11:18:40.551857 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: COMMIT
+[0m11:18:40.550965 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m11:18:40.550830 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.fct_field_orders"} */
+alter table "dataforge_dw"."gold"."fct_field_orders__dbt_tmp" rename to "fct_field_orders"
+[0m11:18:40.552609 [debug] [Thread-3 (]: Applying DROP to: "dataforge_dw"."gold"."dim_customers__dbt_backup"
+[0m11:18:40.554081 [debug] [Thread-3 (]: Using postgres connection "model.dbt_dataforge.dim_customers"
+[0m11:18:40.552757 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m11:18:40.555195 [debug] [Thread-4 (]: Applying DROP to: "dataforge_dw"."gold"."dim_locations__dbt_backup"
+[0m11:18:40.555482 [debug] [Thread-4 (]: Using postgres connection "model.dbt_dataforge.dim_locations"
+[0m11:18:40.554239 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m11:18:40.554381 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_customers"} */
+drop table if exists "dataforge_dw"."gold"."dim_customers__dbt_backup" cascade
+[0m11:18:40.555622 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.dim_locations"} */
+drop table if exists "dataforge_dw"."gold"."dim_locations__dbt_backup" cascade
+[0m11:18:40.556268 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: COMMIT
+[0m11:18:40.556459 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.556596 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: COMMIT
+[0m11:18:40.557134 [debug] [Thread-1 (]: SQL status: COMMIT in 0.000 seconds
+[0m11:18:40.557773 [debug] [Thread-1 (]: Applying DROP to: "dataforge_dw"."gold"."fct_field_orders__dbt_backup"
+[0m11:18:40.558367 [debug] [Thread-1 (]: Using postgres connection "model.dbt_dataforge.fct_field_orders"
+[0m11:18:40.558518 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "model.dbt_dataforge.fct_field_orders"} */
+drop table if exists "dataforge_dw"."gold"."fct_field_orders__dbt_backup" cascade
+[0m11:18:40.557925 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:18:40.559175 [debug] [Thread-3 (]: On model.dbt_dataforge.dim_customers: Close
+[0m11:18:40.558063 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m11:18:40.559880 [debug] [Thread-4 (]: On model.dbt_dataforge.dim_locations: Close
+[0m11:18:40.560356 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de2bb10>]}
+[0m11:18:40.560582 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10df31eb0>]}
+[0m11:18:40.560905 [info ] [Thread-3 (]: 3 of 5 OK created sql table model gold.dim_customers ........................... [[32mSELECT 70[0m in 0.05s]
+[0m11:18:40.560049 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m11:18:40.562049 [debug] [Thread-1 (]: On model.dbt_dataforge.fct_field_orders: Close
+[0m11:18:40.561171 [info ] [Thread-4 (]: 4 of 5 OK created sql table model gold.dim_locations ........................... [[32mSELECT 70[0m in 0.06s]
+[0m11:18:40.562319 [debug] [Thread-4 (]: Finished running node model.dbt_dataforge.dim_locations
+[0m11:18:40.561494 [debug] [Thread-3 (]: Finished running node model.dbt_dataforge.dim_customers
+[0m11:18:40.562582 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '6d649855-4b65-4dd1-bdc6-a977f1a0f33c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbbb2a0>]}
+[0m11:18:40.562899 [info ] [Thread-1 (]: 5 of 5 OK created sql table model gold.fct_field_orders ........................ [[32mSELECT 70[0m in 0.05s]
+[0m11:18:40.563122 [debug] [Thread-1 (]: Finished running node model.dbt_dataforge.fct_field_orders
+[0m11:18:40.563699 [debug] [MainThread]: On master: COMMIT
+[0m11:18:40.563822 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:40.563926 [debug] [MainThread]: On master: COMMIT
+[0m11:18:40.564026 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:18:40.570099 [debug] [MainThread]: SQL status: COMMIT in 0.006 seconds
+[0m11:18:40.570241 [debug] [MainThread]: On master: Close
+[0m11:18:40.570420 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:18:40.570532 [debug] [MainThread]: Connection 'model.dbt_dataforge.fct_field_orders' was properly closed.
+[0m11:18:40.570637 [debug] [MainThread]: Connection 'model.dbt_dataforge.stg_field_orders' was properly closed.
+[0m11:18:40.570734 [debug] [MainThread]: Connection 'model.dbt_dataforge.dim_locations' was properly closed.
+[0m11:18:40.570831 [debug] [MainThread]: Connection 'model.dbt_dataforge.dim_customers' was properly closed.
+[0m11:18:40.570973 [info ] [MainThread]: 
+[0m11:18:40.571099 [info ] [MainThread]: Finished running 3 table models, 2 view models in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m11:18:40.571630 [debug] [MainThread]: Command end result
+[0m11:18:40.588117 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/manifest.json
+[0m11:18:40.589619 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/semantic_manifest.json
+[0m11:18:40.591032 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/osi_document.json
+[0m11:18:40.594878 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/run_results.json
+[0m11:18:40.595030 [info ] [MainThread]: 
+[0m11:18:40.595197 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:18:40.595325 [info ] [MainThread]: 
+[0m11:18:40.595471 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=5
+[0m11:18:40.599276 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.6895921, "process_in_blocks": "0", "process_kernel_time": 0.233167, "process_mem_max_rss": "165724160", "process_out_blocks": "0", "process_user_time": 1.428742}
+[0m11:18:40.599602 [debug] [MainThread]: Command `dbt run` succeeded at 11:18:40.599554 after 0.69 seconds
+[0m11:18:40.599809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b017bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d9c6f90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de65190>]}
+[0m11:18:40.599993 [debug] [MainThread]: Flushing usage events
+[0m11:18:41.238457 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:18:42.680167 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109481e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac6aad0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ac6a850>]}
+
+
+============================== 11:18:42.682543 | 7d67cf31-a5f3-4f9a-bb2a-d1449a912356 ==============================
+[0m11:18:42.682543 [info ] [MainThread]: Running with dbt=1.12.3
+[0m11:18:42.682825 [debug] [MainThread]: running dbt with arguments {'hints_enabled': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'no_print': 'None', 'log_path': '/Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/logs', 'profiles_dir': '.', 'printer_width': '80', 'cache_selected_only': 'False', 'debug': 'False', 'indirect_selection': 'eager', 'quiet': 'False', 'partial_parse': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'static_parser': 'True', 'warn_error': 'None', 'log_format': 'default', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'write_json': 'True', 'empty': 'None', 'maximum_seed_size_mib': '1'}
+[0m11:18:42.776040 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10abea8b0>]}
+[0m11:18:42.806907 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e2b9b0>]}
+[0m11:18:42.807551 [info ] [MainThread]: Registered adapter: postgres=1.11.0
+[0m11:18:42.865156 [debug] [MainThread]: checksum: cde570ccdd9444cf5232fa71678728c598e2e34096a2d1a5ad46a5d547f48a01, vars: {}, profile: dbt_dataforge, target: dev, version: 1.12.3
+[0m11:18:42.948119 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:18:42.948421 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:18:42.948550 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:18:42.953656 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd63650>]}
+[0m11:18:43.023774 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/manifest.json
+[0m11:18:43.025815 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/semantic_manifest.json
+[0m11:18:43.032710 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/osi_document.json
+[0m11:18:43.042922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf967b0>]}
+[0m11:18:43.043171 [info ] [MainThread]: Found 5 models, 8 data tests, 2 sources, 477 macros
+[0m11:18:43.043313 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c0166d0>]}
+[0m11:18:43.044388 [info ] [MainThread]: 
+[0m11:18:43.044546 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:18:43.044658 [info ] [MainThread]: 
+[0m11:18:43.044905 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:18:43.046899 [debug] [ThreadPool]: Acquiring new postgres connection 'list_dataforge_dw_gold'
+[0m11:18:43.077000 [debug] [ThreadPool]: Using postgres connection "list_dataforge_dw_gold"
+[0m11:18:43.077243 [debug] [ThreadPool]: On list_dataforge_dw_gold: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "connection_name": "list_dataforge_dw_gold"} */
+select
+      'dataforge_dw' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'gold'
+    union all
+    select
+      'dataforge_dw' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'gold'
+    union all
+    select
+      'dataforge_dw' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'gold'
+    union all
+    select distinct
+     'dataforge_dw' as database,
+     proname as name,
+     ns.nspname as schema,
+     'function' as type
+    from pg_proc
+     join pg_namespace as ns on pronamespace = ns.oid
+    where ns.nspname ilike 'gold'
+  
+[0m11:18:43.077402 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:18:43.112601 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.035 seconds
+[0m11:18:43.113474 [debug] [ThreadPool]: On list_dataforge_dw_gold: ROLLBACK
+[0m11:18:43.115941 [debug] [ThreadPool]: On list_dataforge_dw_gold: Close
+[0m11:18:43.118877 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:43.120011 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:18:43.120573 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:18:43.133441 [debug] [MainThread]: SQL status: SELECT 2 in 0.013 seconds
+[0m11:18:43.134254 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7d67cf31-a5f3-4f9a-bb2a-d1449a912356', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c28d8b0>]}
+[0m11:18:43.134547 [debug] [MainThread]: On master: ROLLBACK
+[0m11:18:43.135109 [debug] [MainThread]: On master: COMMIT
+[0m11:18:43.135272 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:43.135392 [debug] [MainThread]: On master: COMMIT
+[0m11:18:43.136074 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m11:18:43.136196 [debug] [MainThread]: On master: Close
+[0m11:18:43.137605 [debug] [Thread-1 (]: Began running node test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6
+[0m11:18:43.137812 [info ] [Thread-1 (]: 1 of 8 START test not_null_dim_customers_sk_cliente ............................ [RUN]
+[0m11:18:43.138365 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dataforge_dw_gold, now test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6)
+[0m11:18:43.138742 [debug] [Thread-1 (]: Began compiling node test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6
+[0m11:18:43.138005 [debug] [Thread-4 (]: Began running node test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62
+[0m11:18:43.138563 [debug] [Thread-2 (]: Began running node test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240
+[0m11:18:43.138175 [debug] [Thread-3 (]: Began running node test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9
+[0m11:18:43.148452 [info ] [Thread-3 (]: 3 of 8 START test not_null_fct_field_orders_numero_item_ordem .................. [RUN]
+[0m11:18:43.148671 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9'
+[0m11:18:43.148811 [debug] [Thread-3 (]: Began compiling node test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9
+[0m11:18:43.151842 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9"
+[0m11:18:43.148091 [info ] [Thread-4 (]: 4 of 8 START test not_null_fct_field_orders_valor_fatura ....................... [RUN]
+[0m11:18:43.148284 [info ] [Thread-2 (]: 2 of 8 START test not_null_dim_locations_sk_localizacao ........................ [RUN]
+[0m11:18:43.147879 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6"
+[0m11:18:43.152160 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62'
+[0m11:18:43.152597 [debug] [Thread-4 (]: Began compiling node test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62
+[0m11:18:43.155323 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62"
+[0m11:18:43.152383 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240'
+[0m11:18:43.155551 [debug] [Thread-2 (]: Began compiling node test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240
+[0m11:18:43.158711 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240"
+[0m11:18:43.155723 [debug] [Thread-3 (]: Began executing node test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9
+[0m11:18:43.158887 [debug] [Thread-1 (]: Began executing node test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6
+[0m11:18:43.165538 [debug] [Thread-4 (]: Began executing node test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62
+[0m11:18:43.169010 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62"
+[0m11:18:43.168338 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6"
+[0m11:18:43.167540 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9"
+[0m11:18:43.169173 [debug] [Thread-2 (]: Began executing node test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240
+[0m11:18:43.169994 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240"
+[0m11:18:43.170299 [debug] [Thread-3 (]: Using postgres connection "test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9"
+[0m11:18:43.170929 [debug] [Thread-3 (]: On test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select numero_item_ordem
+from "dataforge_dw"."gold"."fct_field_orders"
+where numero_item_ordem is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.171083 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:18:43.170782 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6"
+[0m11:18:43.171290 [debug] [Thread-1 (]: On test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_cliente
+from "dataforge_dw"."gold"."dim_customers"
+where sk_cliente is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.171437 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:18:43.170466 [debug] [Thread-2 (]: Using postgres connection "test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240"
+[0m11:18:43.171649 [debug] [Thread-2 (]: On test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select sk_localizacao
+from "dataforge_dw"."gold"."dim_locations"
+where sk_localizacao is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.170629 [debug] [Thread-4 (]: Using postgres connection "test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62"
+[0m11:18:43.171972 [debug] [Thread-4 (]: On test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select valor_fatura
+from "dataforge_dw"."gold"."fct_field_orders"
+where valor_fatura is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.172116 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:18:43.171817 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:18:43.181852 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m11:18:43.184366 [debug] [Thread-3 (]: On test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9: ROLLBACK
+[0m11:18:43.185349 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m11:18:43.187559 [debug] [Thread-2 (]: On test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240: ROLLBACK
+[0m11:18:43.187820 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.016 seconds
+[0m11:18:43.188936 [debug] [Thread-4 (]: On test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62: ROLLBACK
+[0m11:18:43.188205 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.017 seconds
+[0m11:18:43.187983 [debug] [Thread-3 (]: On test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9: Close
+[0m11:18:43.189116 [debug] [Thread-2 (]: On test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240: Close
+[0m11:18:43.190257 [info ] [Thread-3 (]: 3 of 8 PASS not_null_fct_field_orders_numero_item_ordem ........................ [[32mPASS[0m in 0.04s]
+[0m11:18:43.190813 [debug] [Thread-3 (]: Finished running node test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9
+[0m11:18:43.190996 [debug] [Thread-3 (]: Began running node test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7
+[0m11:18:43.189729 [debug] [Thread-1 (]: On test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6: ROLLBACK
+[0m11:18:43.189892 [debug] [Thread-4 (]: On test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62: Close
+[0m11:18:43.190548 [info ] [Thread-2 (]: 2 of 8 PASS not_null_dim_locations_sk_localizacao .............................. [[32mPASS[0m in 0.04s]
+[0m11:18:43.191745 [debug] [Thread-2 (]: Finished running node test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240
+[0m11:18:43.191921 [debug] [Thread-2 (]: Began running node test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c
+[0m11:18:43.192074 [info ] [Thread-2 (]: 6 of 8 START test unique_dim_customers_sk_cliente .............................. [RUN]
+[0m11:18:43.191192 [info ] [Thread-3 (]: 5 of 8 START test relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_  [RUN]
+[0m11:18:43.192644 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.dbt_dataforge.not_null_fct_field_orders_numero_item_ordem.57d37fd8f9, now test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7)
+[0m11:18:43.191496 [info ] [Thread-4 (]: 4 of 8 PASS not_null_fct_field_orders_valor_fatura ............................. [[32mPASS[0m in 0.04s]
+[0m11:18:43.193006 [debug] [Thread-4 (]: Finished running node test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62
+[0m11:18:43.193172 [debug] [Thread-4 (]: Began running node test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6
+[0m11:18:43.193321 [info ] [Thread-4 (]: 7 of 8 START test unique_dim_locations_sk_localizacao .......................... [RUN]
+[0m11:18:43.193527 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.dbt_dataforge.not_null_fct_field_orders_valor_fatura.639e7f2b62, now test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6)
+[0m11:18:43.192302 [debug] [Thread-1 (]: On test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6: Close
+[0m11:18:43.192795 [debug] [Thread-3 (]: Began compiling node test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7
+[0m11:18:43.192478 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.dbt_dataforge.not_null_dim_locations_sk_localizacao.109d519240, now test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c)
+[0m11:18:43.193699 [debug] [Thread-4 (]: Began compiling node test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6
+[0m11:18:43.200283 [info ] [Thread-1 (]: 1 of 8 PASS not_null_dim_customers_sk_cliente .................................. [[32mPASS[0m in 0.06s]
+[0m11:18:43.202952 [debug] [Thread-3 (]: Writing injected SQL for node "test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7"
+[0m11:18:43.203166 [debug] [Thread-2 (]: Began compiling node test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c
+[0m11:18:43.210118 [debug] [Thread-2 (]: Writing injected SQL for node "test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c"
+[0m11:18:43.207384 [debug] [Thread-1 (]: Finished running node test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6
+[0m11:18:43.207117 [debug] [Thread-4 (]: Writing injected SQL for node "test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6"
+[0m11:18:43.210382 [debug] [Thread-1 (]: Began running node test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7
+[0m11:18:43.210755 [info ] [Thread-1 (]: 8 of 8 START test unique_fct_field_orders_numero_item_ordem .................... [RUN]
+[0m11:18:43.210978 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_dataforge.not_null_dim_customers_sk_cliente.27c3b691a6, now test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7)
+[0m11:18:43.211634 [debug] [Thread-1 (]: Began compiling node test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7
+[0m11:18:43.214787 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7"
+[0m11:18:43.211495 [debug] [Thread-2 (]: Began executing node test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c
+[0m11:18:43.211176 [debug] [Thread-3 (]: Began executing node test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7
+[0m11:18:43.215218 [debug] [Thread-1 (]: Began executing node test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7
+[0m11:18:43.211348 [debug] [Thread-4 (]: Began executing node test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6
+[0m11:18:43.219613 [debug] [Thread-2 (]: Writing runtime sql for node "test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c"
+[0m11:18:43.220517 [debug] [Thread-3 (]: Writing runtime sql for node "test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7"
+[0m11:18:43.221213 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7"
+[0m11:18:43.221828 [debug] [Thread-4 (]: Writing runtime sql for node "test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6"
+[0m11:18:43.222293 [debug] [Thread-2 (]: Using postgres connection "test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c"
+[0m11:18:43.222945 [debug] [Thread-2 (]: On test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sk_cliente as unique_field,
+    count(*) as n_records
+
+from "dataforge_dw"."gold"."dim_customers"
+where sk_cliente is not null
+group by sk_cliente
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.223104 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m11:18:43.222795 [debug] [Thread-1 (]: Using postgres connection "test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7"
+[0m11:18:43.223321 [debug] [Thread-1 (]: On test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    numero_item_ordem as unique_field,
+    count(*) as n_records
+
+from "dataforge_dw"."gold"."fct_field_orders"
+where numero_item_ordem is not null
+group by numero_item_ordem
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.223469 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:18:43.222472 [debug] [Thread-4 (]: Using postgres connection "test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6"
+[0m11:18:43.223681 [debug] [Thread-4 (]: On test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    sk_localizacao as unique_field,
+    count(*) as n_records
+
+from "dataforge_dw"."gold"."dim_locations"
+where sk_localizacao is not null
+group by sk_localizacao
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.223860 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m11:18:43.222640 [debug] [Thread-3 (]: Using postgres connection "test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7"
+[0m11:18:43.224111 [debug] [Thread-3 (]: On test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7: /* {"app": "dbt", "dbt_version": "1.12.3", "profile_name": "dbt_dataforge", "target_name": "dev", "node_id": "test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select sk_cliente as from_field
+    from "dataforge_dw"."gold"."fct_field_orders"
+    where sk_cliente is not null
+),
+
+parent as (
+    select sk_cliente as to_field
+    from "dataforge_dw"."gold"."dim_customers"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:18:43.224291 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m11:18:43.235424 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m11:18:43.236419 [debug] [Thread-1 (]: On test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7: ROLLBACK
+[0m11:18:43.235645 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m11:18:43.237470 [debug] [Thread-2 (]: On test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c: ROLLBACK
+[0m11:18:43.236637 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m11:18:43.238292 [debug] [Thread-3 (]: On test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7: ROLLBACK
+[0m11:18:43.236779 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m11:18:43.239077 [debug] [Thread-4 (]: On test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6: ROLLBACK
+[0m11:18:43.237631 [debug] [Thread-1 (]: On test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7: Close
+[0m11:18:43.238454 [debug] [Thread-2 (]: On test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c: Close
+[0m11:18:43.239754 [debug] [Thread-4 (]: On test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6: Close
+[0m11:18:43.239546 [info ] [Thread-1 (]: 8 of 8 PASS unique_fct_field_orders_numero_item_ordem .......................... [[32mPASS[0m in 0.03s]
+[0m11:18:43.240015 [debug] [Thread-1 (]: Finished running node test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7
+[0m11:18:43.240294 [info ] [Thread-2 (]: 6 of 8 PASS unique_dim_customers_sk_cliente .................................... [[32mPASS[0m in 0.05s]
+[0m11:18:43.239226 [debug] [Thread-3 (]: On test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7: Close
+[0m11:18:43.240884 [info ] [Thread-3 (]: 5 of 8 PASS relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_  [[32mPASS[0m in 0.05s]
+[0m11:18:43.241432 [debug] [Thread-3 (]: Finished running node test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7
+[0m11:18:43.240563 [debug] [Thread-2 (]: Finished running node test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c
+[0m11:18:43.241188 [info ] [Thread-4 (]: 7 of 8 PASS unique_dim_locations_sk_localizacao ................................ [[32mPASS[0m in 0.05s]
+[0m11:18:43.241754 [debug] [Thread-4 (]: Finished running node test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6
+[0m11:18:43.242376 [debug] [MainThread]: On master: COMMIT
+[0m11:18:43.242514 [debug] [MainThread]: Using postgres connection "master"
+[0m11:18:43.242619 [debug] [MainThread]: On master: COMMIT
+[0m11:18:43.242713 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:18:43.249484 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m11:18:43.249642 [debug] [MainThread]: On master: Close
+[0m11:18:43.249831 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:18:43.249956 [debug] [MainThread]: Connection 'test.dbt_dataforge.unique_fct_field_orders_numero_item_ordem.19405eb0d7' was properly closed.
+[0m11:18:43.250063 [debug] [MainThread]: Connection 'test.dbt_dataforge.relationships_fct_field_orders_sk_cliente__sk_cliente__ref_dim_customers_.841c5b59b7' was properly closed.
+[0m11:18:43.250160 [debug] [MainThread]: Connection 'test.dbt_dataforge.unique_dim_locations_sk_localizacao.d0ae98dfe6' was properly closed.
+[0m11:18:43.250251 [debug] [MainThread]: Connection 'test.dbt_dataforge.unique_dim_customers_sk_cliente.3a06efd98c' was properly closed.
+[0m11:18:43.250383 [info ] [MainThread]: 
+[0m11:18:43.250521 [info ] [MainThread]: Finished running 8 data tests in 0 hours 0 minutes and 0.21 seconds (0.21s).
+[0m11:18:43.251197 [debug] [MainThread]: Command end result
+[0m11:18:43.267373 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/manifest.json
+[0m11:18:43.268879 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/semantic_manifest.json
+[0m11:18:43.270311 [debug] [MainThread]: Wrote artifact OsiDocument to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/osi_document.json
+[0m11:18:43.274222 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/guilhermemiguel/Documents/Projetos_Treinamento/projeto-dataforge/dbt_dataforge/target/run_results.json
+[0m11:18:43.274369 [info ] [MainThread]: 
+[0m11:18:43.274536 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:18:43.274658 [info ] [MainThread]: 
+[0m11:18:43.274795 [info ] [MainThread]: Done. PASS=8 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=8
+[0m11:18:43.276611 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.64341384, "process_in_blocks": "0", "process_kernel_time": 0.234758, "process_mem_max_rss": "167067648", "process_out_blocks": "0", "process_user_time": 1.479394}
+[0m11:18:43.276816 [debug] [MainThread]: Command `dbt test` succeeded at 11:18:43.276779 after 0.64 seconds
+[0m11:18:43.276986 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2a5d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c39e4c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c2b5de0>]}
+[0m11:18:43.277131 [debug] [MainThread]: Flushing usage events
+[0m11:18:43.694280 [debug] [MainThread]: An error was encountered while trying to flush usage events

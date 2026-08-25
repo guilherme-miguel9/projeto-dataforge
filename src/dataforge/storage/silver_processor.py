@@ -47,9 +47,9 @@ def process_bronze_to_silver():
         # 3. Lê com Pandas
         df = pd.read_excel(file_buffer)
         raw_records = df.to_dict(orient="records")
-        validos = validate_field_orders(raw_records)
+        validos, quarentena = validate_field_orders(raw_records)
         all_valid_records.extend(validos)
-        log.info(f"   Linhas carregadas no Pandas: {len(df)} linhas")
+        log.info(f"   Linhas carregadas no Pandas: {len(df)} linhas ({len(validos)} válidas, {len(quarentena)} quarentena)")
 
     df_silver = pl.DataFrame(all_valid_records)
 
