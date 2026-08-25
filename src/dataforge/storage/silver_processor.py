@@ -1,4 +1,5 @@
 import io
+from datetime import UTC
 
 import pandas as pd
 import polars as pl
@@ -14,8 +15,9 @@ log = get_logger("SilverProcessor")
 def process_bronze_to_silver():
     from datetime import datetime
 
-    year = datetime.now().year  # noqa: DTZ005
-    month = datetime.now().month  # noqa: DTZ005
+    now = datetime.now(UTC)
+    year = now.year
+    month = now.month
 
     client = get_s3_client()
     all_valid_records = []

@@ -1,6 +1,6 @@
 import io
 import json
-from datetime import datetime
+from datetime import UTC, datetime
 
 import polars as pl
 from pydantic import ValidationError
@@ -16,8 +16,9 @@ log = get_logger("SilverCustomers")
 def process_bronze_to_silver_customers():
     client = get_s3_client()
     all_valid_customers = []
-    year = datetime.now().year  # noqa: DTZ005
-    month = datetime.now().month  # noqa: DTZ005
+    now = datetime.now(UTC)
+    year = now.year
+    month = now.month
 
     response = client.list_objects_v2(Bucket="bronze", Prefix="api_customers/")
     objects = response.get("Contents", [])

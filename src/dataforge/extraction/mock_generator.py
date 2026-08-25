@@ -1,5 +1,5 @@
 import random
-from datetime import datetime, timedelta
+from datetime import UTC, datetime, timedelta
 
 import pandas as pd
 
@@ -53,7 +53,7 @@ def generate_mock_sales_file(filename: str, num_records: int = 50) -> str:
             "O. Sem leit real": "N",
             "Nota leit.": "",
             "Hora leit.": (
-                datetime.now() - timedelta(minutes=random.randint(5, 500))  # noqa: DTZ005
+                datetime.now(UTC) - timedelta(minutes=random.randint(5, 500))
             ).strftime("%H:%M:%S"),
             "Seq.Mod": 1,
             "Cond WOL": "Normal",

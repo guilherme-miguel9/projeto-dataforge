@@ -1,6 +1,5 @@
 import json
-from datetime import datetime
-from pathlib import Path  # noqa: F401
+from datetime import UTC, datetime
 
 import pandas as pd
 from pydantic import ValidationError
@@ -10,7 +9,6 @@ from dataforge.utils.paths import DATA_DIR, RAW_DATA_DIR
 
 
 def validate_field_orders(raw_records: list[dict]) -> tuple[list[dict], list[dict]]:
-    print("to aqui")
     valid_records = []
     quarantine_records = []
 
@@ -35,14 +33,14 @@ def validate_field_orders(raw_records: list[dict]) -> tuple[list[dict], list[dic
         except ValidationError as error:
             row_with_error = dict(row)
             row_with_error["erro_validacao"] = str(error)
-            row_with_error["data_quarentena"] = datetime.now().isoformat()  # noqa: DTZ005
+            row_with_error["data_quarentena"] = datetime.now(UTC).isoformat()
             quarantine_records.append(row_with_error)
 
     # 3. Se houver itens inválidos, salvar na pasta de quarentena
     if quarantine_records:
         quarantine_dir = DATA_DIR / "quarantine" / "field_orders"
         quarantine_dir.mkdir(parents=True, exist_ok=True)
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")  # noqa: DTZ005
+        timestamp = datetime.now(UTC).strftime("%Y%m%d_%H%M%S")
         quarantine_file = quarantine_dir / f"quarantine_{timestamp}.json"
 
         with open(quarantine_file, "w", encoding="utf-8") as f:

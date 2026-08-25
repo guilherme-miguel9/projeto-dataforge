@@ -1,4 +1,5 @@
 # from sqlalchemy.dialects.oracle import RAW
+from datetime import UTC
 from pathlib import Path
 
 import boto3
@@ -70,8 +71,9 @@ if __name__ == "__main__":
 
     from dataforge.utils.paths import RAW_DATA_DIR
 
-    year = datetime.now().year  # noqa: DTZ005
-    month = datetime.now().month  # noqa: DTZ005
+    now = datetime.now(UTC)
+    year = now.year
+    month = now.month
 
     print("Iniciando os Buckets no MinIO\n")
     init_s3_buckets()

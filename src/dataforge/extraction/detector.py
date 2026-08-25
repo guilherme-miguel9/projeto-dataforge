@@ -1,6 +1,6 @@
 import hashlib
 import json
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 
 from dataforge.utils.paths import PROCESSED_DATA_DIR, RAW_DATA_DIR
@@ -15,7 +15,7 @@ def update_manifest(file_path: Path, manifest_path: Path, status: str = "INGESTE
     manifest[file_hash] = {
         "file_name": file_path.name,
         "file_size_bytes": file_path.stat().st_size,
-        "ingested_at": datetime.now().isoformat(),  # noqa: DTZ005
+        "ingested_at": datetime.now(UTC).isoformat(),
         "status": status,
     }
 
