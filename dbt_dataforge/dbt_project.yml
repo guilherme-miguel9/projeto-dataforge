@@ -1,0 +1,14 @@
+name: "dbt_dataforge"
+version: "1.0.0"
+config-version: 2
+
+profile: "dbt_dataforge"
+
+model-paths: ["models"]
+
+models:
+  dbt_dataforge:
+    staging:
+      +materialized: view # Staging são Views leves
+    marts:
+      +materialized: table # Camada Gold são Tabelas físicas

@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_silver
+    description: "Tabelas carregadas da Camada Silver para o PostgreSQL"
+    schema: raw_silver
+    tables:
+      - name: field_orders
+        description: "Ordens de serviço e leituras de campo brutas"
+      - name: customers
+        description: "Cadastro de clientes extraídos da API"

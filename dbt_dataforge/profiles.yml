@@ -1,0 +1,12 @@
+dbt_dataforge:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433
+      user: postgres
+      password: postgrespassword
+      dbname: dataforge_dw
+      schema: gold
+      threads: 4

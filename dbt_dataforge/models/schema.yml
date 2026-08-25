@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Tabela Dimensão com dados cadastrais dos clientes"
+    columns:
+      - name: sk_cliente
+        description: "Chave substituta única do cliente"
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_locations
+    description: "Tabela Dimensão com coordenadas geográficas"
+    columns:
+      - name: sk_localizacao
+        description: "Chave substituta única da localização"
+        tests:
+          - unique
+          - not_null
+
+  - name: fct_field_orders
+    description: "Tabela Fato com as métricas de faturamento e ordens de campo"
+    columns:
+      - name: numero_item_ordem
+        description: "Chave primária da ordem de serviço"
+        tests:
+          - unique
+          - not_null
+      - name: valor_fatura
+        description: "Valor faturado da leitura"
+        tests:
+          - not_null
+      - name: sk_cliente
+        description: "Chave estrangeira apontando para a Dimensão Cliente"
+        tests:
+          - relationships:
+              to: ref('dim_customers')
+              field: sk_cliente
