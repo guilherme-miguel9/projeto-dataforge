@@ -6,7 +6,7 @@ authors = [
     {name = "Guilherme Miguel"}
 ]
 readme = "README.md"
-requires-python = ">=3.14"
+requires-python = ">=3.11, <3.15"
 dependencies = [
     "requests (>=2.34.2,<3.0.0)",
     "pandas (>=3.0.5,<4.0.0)",
@@ -16,7 +16,10 @@ dependencies = [
     "pydantic (>=2.13.4,<3.0.0)",
     "python-dotenv (>=1.2.3,<2.0.0)",
     "boto3 (>=1.43.78,<2.0.0)",
-    "dbt (>=1.0.0.40.18,<2.0.0.0.0)"
+    "dbt-core (>=1.12.3,<2.0.0)",
+    "dbt-postgres (>=1.11.0,<2.0.0)",
+    "psycopg2-binary (>=2.9.12,<3.0.0)",
+    "sqlalchemy (>=2.0.52,<3.0.0)"
 ]
 
 
