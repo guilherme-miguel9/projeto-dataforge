@@ -1,14 +1,6 @@
 # DataForge: Plataforma de Engenharia de Dados & Data Lakehouse Medallion
 
-![CI/CD Pipeline](https://github.com/guilherme-miguel9/projeto-dataforge/actions/workflows/ci.yml/badge.svg)  
-![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-blue?logo=python)  
-![Poetry](https://img.shields.io/badge/Poetry-Package%20Manager-blueviolet?logo=poetry)  
-![MinIO](https://img.shields.io/badge/MinIO-Object%20Storage-red?logo=minio)  
-![Polars](https://img.shields.io/badge/Polars-Rust%20DataFrame-orange?logo=polars)  
-![dbt](https://img.shields.io/badge/dbt-Transformation-FF694B?logo=dbt)  
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Data%20Warehouse-336791?logo=postgresql)  
- ![Ruff](https://img.shields.io/badge/Ruff-Linter%20%26%20Formatter-green)  
- ![PyTest](https://img.shields.io/badge/PyTest-Unit%20Tests-brightgreen?logo=pytest)
+![CI/CD Pipeline](https://github.com/guilherme-miguel9/projeto-dataforge/actions/workflows/ci.yml/badge.svg) ![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-blue?logo=python) ![Poetry](https://img.shields.io/badge/Poetry-Package%20Manager-blueviolet?logo=poetry) ![MinIO](https://img.shields.io/badge/MinIO-Object%20Storage-red?logo=minio) ![Polars](https://img.shields.io/badge/Polars-Rust%20DataFrame-orange?logo=polars) ![dbt](https://img.shields.io/badge/dbt-Transformation-FF694B?logo=dbt) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Data%20Warehouse-336791?logo=postgresql) ![Ruff](https://img.shields.io/badge/Ruff-Linter%20%26%20Formatter-green) ![PyTest](https://img.shields.io/badge/PyTest-Unit%20Tests-brightgreen?logo=pytest)
 
 # Visão geral do Projeto:
 
@@ -58,33 +50,21 @@ flowchart TD
         Q1 -- "Inválidos" --> Q2
         Q1 -- "Válidos" --> S1 --> S2 --> S3
         S3 --> G1 --> G2 --> G3 --> G4 --> PBI
-
 ```
 
 ## Decisões de Engenharia & Trade-offs (ADRs)
 
-Componente │ Decisão Técnica │ Motivo & Benefício de Negócio
-───────────────────┼─────────────────────────┼────────────────────────────────────────────────────
-Object Storage │ MinIO (S3 API) │ Compatibilidade nativa 1:1 com AWS S3, permitindo
-│ │ deploy em nuvem sem alterar uma linha de código.
-Data Lake Format │ Apache Parquet + Snappy │ Redução de ~80% no armazenamento em relação ao
-│ │ Excel original e leitura colunar ultra rápida.
-Quality Gate │ Pydantic + DLQ │ Isolamento automático de faturas e dados
-│ │ corrompidos para quarentena sem interromper a
-│ │ esteira.
-Processing Engine │ Polars (Rust) │ Velocidade de execução em memória com baixo
-│ │ consumo de RAM para grandes volumes.
-Data Warehouse │ PostgreSQL 15 │ Armazenamento relacional analítico robusto com
-│ │ suporte a conexões de BI.
-Transformation │ dbt (Data Build Tool) │ Linhagem de dados, regras de negócio em SQL
-│ │ modular e 8 testes de qualidade automatizados.
-Idempotência │ TRUNCATE + Append │ Capacidade de reprocessar o pipeline 100x sem
-│ │ duplicar linhas e sem quebrar Views dependentes do
-│ │ dbt.
-Observabilidade │ Structured JSON Logging │ Logs padronizados com execution_id, timestamp UTC
-│ │ e level para observabilidade de nuvem.
-CI/CD │ GitHub Actions + PyTest │ Esteira automática rodando linters (Ruff) e testes
-│ │ unitários a cada git push.
+| Componente            | Decisão Técnica             | Motivo & Benefício de Negócio                                                                         |
+| :-------------------- | :-------------------------- | :---------------------------------------------------------------------------------------------------- |
+| **Object Storage**    | **MinIO (S3 API)**          | Compatibilidade nativa 1:1 com AWS S3, permitindo deploy em nuvem sem alterar uma linha de código.    |
+| **Data Lake Format**  | **Apache Parquet + Snappy** | Redução de ~80% no armazenamento em relação ao Excel original e leitura colunar ultra rápida.         |
+| **Quality Gate**      | **Pydantic + DLQ**          | Isolamento automático de faturas e dados corrompidos para quarentena sem interromper a esteira.       |
+| **Processing Engine** | **Polars (Rust)**           | Velocidade de execução em memória com baixo consumo de RAM para grandes volumes.                      |
+| **Data Warehouse**    | **PostgreSQL 15**           | Armazenamento relacional analítico robusto com suporte a conexões de BI.                              |
+| **Transformation**    | **dbt (Data Build Tool)**   | Linhagem de dados, regras de negócio em SQL modular e 8 testes de qualidade automatizados.            |
+| **Idempotência**      | **TRUNCATE + Append**       | Capacidade de reprocessar o pipeline 100x sem duplicar linhas e sem quebrar Views dependentes do dbt. |
+| **Observabilidade**   | **Structured JSON Logging** | Logs padronizados com `execution_id`, `timestamp` UTC e `level` para observabilidade de nuvem.        |
+| **CI/CD**             | **GitHub Actions + PyTest** | Esteira automática rodando linters (Ruff) e testes unitários a cada `git push`.                       |
 
 ## Como executar localmente
 
@@ -108,6 +88,12 @@ docker compose up -d
 poetry install
 ```
 
+### 4. Executar o Pipeline Master de Ponta a Ponta
+
+```bash
+python src/dataforge/pipeline.py
+```
+
 ### 5. Executar os Testes Automatizados
 
 ```bash
@@ -121,10 +107,8 @@ projeto-dataforge/
     ├── .github/workflows/ci.yml       # Esteira de CI/CD no GitHub Actions
     ├── dbt_dataforge/                 # Projeto dbt com Modelagem Dimensional
     │   ├── models/
-    │   │   ├── staging/               # Views de limpeza e formatação (stg_field_orders,
-  stg_customers)
-    │   │   ├── marts/                 # Star Schema Gold (dim_customers, dim_locations,
-  fct_field_orders)
+    │   │   ├── staging/               # Views de limpeza e formatação (stg_field_orders, stg_customers)
+    │   │   ├── marts/                 # Star Schema Gold (dim_customers, dim_locations, fct_field_orders)
     │   │   └── schema.yml             # 8 Testes automatizados do dbt
     │   ├── dbt_project.yml
     │   └── profiles.yml
