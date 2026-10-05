@@ -1,17 +1,20 @@
-# from sqlalchemy.dialects.oracle import RAW
+import os
 from datetime import UTC
 from pathlib import Path
 
 import boto3
 from botocore.exceptions import ClientError, NoCredentialsError
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 def get_s3_client():
     s3_client = boto3.client(
         "s3",
-        endpoint_url="http://localhost:9000",
-        aws_access_key_id="minioadmin",
-        aws_secret_access_key="minioadmin",
+        endpoint_url=os.getenv("S3_ENDPOINT_URL", "http://localhost:9000"),
+        aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID", "minioadmin"),
+        aws_secret_access_key=os.getenv("AWS_SECRET_ACCESS_KEY", "minioadmin"),
     )
     return s3_client
 

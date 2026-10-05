@@ -22,8 +22,74 @@ def validate_field_orders(raw_records: list[dict]) -> tuple[list[dict], list[dic
             "latitude": row.get("Latitude localiz.geográfica") or row.get("latitude"),
             "longitude": row.get("Longitude localiz.geográfica")
             or row.get("longitude"),
-            "hora_leitura": row.get("Hora leit.") or row.get("hora_leitura"),
-            "status_leitura": row.get("FA CT OK") or row.get("status_leitura"),
+            "hora_leitura": str(
+                row.get("Hora leit.") or row.get("hora_leitura") or "00:00:00"
+            ),
+            "status_leitura": str(
+                row.get("FA CT OK") or row.get("status_leitura") or "OK"
+            ),
+            "data_leitura": str(
+                row.get("Data_Atual")
+                or row.get("data_leitura")
+                or datetime.now(UTC).strftime("%Y-%m-%d")
+            ),
+            "nro_ordem": str(row.get("Nº") or row.get("nro_ordem") or ""),
+            "instalacao": str(row.get("Instal") or row.get("instalacao") or ""),
+            "registrador": str(row.get("Registrador") or row.get("registrador") or ""),
+            "rua": str(row.get("Rua") or row.get("rua") or ""),
+            "nro_casa": str(row.get("Nº da casa") or row.get("nro_casa") or ""),
+            "sequencia": str(row.get("Sequência") or row.get("sequencia") or ""),
+            "complemento": str(row.get("Complemento") or row.get("complemento") or ""),
+            "ponto_ref": str(row.get("Ponto Ref") or row.get("ponto_ref") or ""),
+            "local": str(row.get("Local") or row.get("local") or ""),
+            "bairro": str(row.get("Bairro") or row.get("bairro") or ""),
+            "sigla_edificio": str(
+                row.get("Sigla edifício") or row.get("sigla_edificio") or ""
+            ),
+            "nro_sala": str(row.get("Nº sala") or row.get("nro_sala") or ""),
+            "andar": str(row.get("Andar") or row.get("andar") or ""),
+            "complemento_endereco": str(
+                row.get("Complemento endereco") or row.get("complemento_endereco") or ""
+            ),
+            "obj_ligacao": str(row.get("ObjLigacao") or row.get("obj_ligacao") or ""),
+            "nro_poste": str(row.get("Nº Poste") or row.get("nro_poste") or ""),
+            "nro_serie": str(row.get("Nº Serie") or row.get("nro_serie") or ""),
+            "unid_leit": str(row.get("Unid.leit") or row.get("unid_leit") or ""),
+            "o_leitura_real": str(
+                row.get("O. leitura real") or row.get("o_leitura_real") or ""
+            ),
+            "o_sem_leit_real": str(
+                row.get("O. Sem leit real") or row.get("o_sem_leit_real") or ""
+            ),
+            "nota_leit": str(row.get("Nota leit.") or row.get("nota_leit") or ""),
+            "seq_mod": str(row.get("Seq.Mod") or row.get("seq_mod") or ""),
+            "cond_wol": str(row.get("Cond WOL") or row.get("cond_wol") or ""),
+            "leit": float(row.get("Leit") or row.get("leit") or 0.0),
+            "cod_leit": str(
+                row.get("Codigo_Leitor")
+                or row.get("cod_leit")
+                or row.get("Cod_Leit")
+                or ""
+            ),
+            "nome_leit": str(row.get("Nome leit") or row.get("nome_leit") or ""),
+            "indic_foto": str(row.get("Indic Foto") or row.get("indic_foto") or ""),
+            "interv_leit": str(row.get("Interv.Leit") or row.get("interv_leit") or ""),
+            "cta_contr": str(row.get("Cta.contr.") or row.get("cta_contr") or ""),
+            "abaixo_lim": str(row.get("Abaixo lim") or row.get("abaixo_lim") or ""),
+            "excede_lim": str(row.get("Excede lim") or row.get("excede_lim") or ""),
+            "desvio_leit": str(row.get("Desvio leit") or row.get("desvio_leit") or ""),
+            "fat_assin": str(row.get("Fat. Assin") or row.get("fat_assin") or ""),
+            "tipo_ordem": str(row.get("Tipo ordem") or row.get("tipo_ordem") or ""),
+            "res_campo": str(row.get("ResCampo") or row.get("res_campo") or ""),
+            "impresso": str(row.get("Impresso") or row.get("impresso") or ""),
+            "coment_leitura": str(
+                row.get("Coment.leitura") or row.get("coment_leitura") or ""
+            ),
+            "coment_fatura": str(
+                row.get("Coment.fatura") or row.get("coment_fatura") or ""
+            ),
+            "tipo_rota": str(row.get("Tipo rota") or row.get("tipo_rota") or ""),
+            "fa_ct_ok": str(row.get("FA CT OK") or row.get("fa_ct_ok") or ""),
         }
 
         # 2. Tentar validar com o Pydantic

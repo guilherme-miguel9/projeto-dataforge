@@ -1,13 +1,27 @@
+import os
+
 import polars as pl
+from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
 
 from dataforge.utils.logger import get_logger
 from dataforge.utils.paths import PROCESSED_DATA_DIR
 
+load_dotenv()
+
 log = get_logger("postgres_loader")
 
-# URL de conexão com o banco no Docker
-DB_URL = "postgresql+psycopg2://postgres:postgrespassword@localhost:5433/dataforge_dw"
+# Conexão configurável via variáveis de ambiente / .env
+DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_PORT = os.getenv("DB_PORT", "5432")
+DB_USER = os.getenv("DB_USER", "postgres")
+DB_PASSWORD = os.getenv("DB_PASSWORD", "postgrespassword")
+DB_NAME = os.getenv("DB_NAME", "dataforge_dw")
+
+DB_URL = os.getenv(
+    "DATABASE_URL",
+    f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}",
+)
 
 
 def load_silver_to_postgres():

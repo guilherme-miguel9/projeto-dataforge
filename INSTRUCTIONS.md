@@ -64,3 +64,8 @@ Consumo & Visualização (Power BI / Dashboards)
 5. **Code Review**: Feedback técnico aprofundado.
 6. **Correção e Refatoração**: Ajustes guiados pelo desenvolvedor.
 7. **Consolidação**: Resumo dos aprendizados antes de avançar para o próximo bloco.
+
+---
+
+## 4. Memória Persistente do Projeto
+Toda a história arquitetural, decisões de negócio, credenciais de containers e status das fases estão consolidadas no arquivo [PROJECT_MEMORY.md](PROJECT_MEMORY.md). Toda nova sessão deve consultar este documento.

@@ -1,11 +1,36 @@
+# Ambientes Virtuais e Dependências
 .venv/
+env/
+venv/
+
+# Variáveis de Ambiente e Segredos
 .env
+.env.*
+*.pem
+*.key
 
+# Dados Locais e Camadas do Data Lake (NUNCA SUBIR DADOS PARA GIT)
 data/
+*.xlsx
+*.xls
+*.parquet
+ingestion_manifest.json
 
+# Cache Python e Testes
 __pycache__/
 *.pyc
-.pytest_cache
+.pytest_cache/
 .ruff_cache/
+
+# dbt Artifacts e Logs
+dbt_dataforge/target/
+dbt_dataforge/logs/
+dbt_dataforge/dbt_packages/
+
+# Arquivos de Sistema e IDEs
 .DS_Store
+.vscode/
+.idea/
+
+# SQLs temporários
 LEITURA TABELA.sql

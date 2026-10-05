@@ -3,10 +3,10 @@ dbt_dataforge:
   outputs:
     dev:
       type: postgres
-      host: localhost
-      port: 5433
-      user: postgres
-      password: postgrespassword
-      dbname: dataforge_dw
-      schema: gold
+      host: "{{ env_var('DB_HOST', 'localhost') }}"
+      port: "{{ env_var('DB_PORT', '5432') | int }}"
+      user: "{{ env_var('DB_USER', 'postgres') }}"
+      password: "{{ env_var('DB_PASSWORD', 'postgrespassword') }}"
+      dbname: "{{ env_var('DB_NAME', 'dataforge_dw') }}"
+      schema: "{{ env_var('DB_SCHEMA', 'leitura_star') }}"
       threads: 4
