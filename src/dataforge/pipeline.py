@@ -36,7 +36,7 @@ def run_pipeline():
 
     execution_id = str(uuid.uuid4())[:8]
     start_total = time.perf_counter()
-    log.info(f"Iniciando o pipeline DATAfORGE - Execution ID: {execution_id}")
+    log.info(f"Iniciando o pipeline DataForge - Execution ID: {execution_id}")
 
     log.info("[Etapa 1] Ingestão & Detecção de Fontes heterogêneas")
 

@@ -4,9 +4,9 @@
 
 # Visão geral do Projeto:
 
-O DataForge é uma plataforma moderna de Engenharia de Dados orientada à Arquitetura Medalhão (Bronze, Silver e Gold), é projetada para resolver desafios reais de ingestão, validação de qualidade, governança e modelagem analítica para operações de campo.
+O DataForge é uma plataforma moderna de Engenharia de Dados orientada à Arquitetura Medalhão (Bronze, Silver e Gold), projetada para resolver desafios reais de ingestão, validação de qualidade, governança e modelagem analítica para operações de campo.
 
-A plataforma processa dados heterogêneos, nesse caso é simulado de Excel e API, porém a plataforma foi desenvolvida para ser aplicado em uma situação real (dados confidenciais). O projeto faz ingestão incremental, quarentena de registros inválidos (DLQ), compressão colunar Parquet e modelagem dimensional em Star Schema (Kimball) para consumo analítico no Power BI.
+A plataforma processa dados heterogêneos (simulados a partir de planilhas Excel e API REST, estruturados para refletir operações reais de campo). O projeto realiza ingestão incremental, quarentena de registros inválidos (DLQ), compressão colunar Parquet e modelagem dimensional em Star Schema (Kimball) para consumo analítico no Power BI.
 
 ## Arquitetura da Solução:
 
